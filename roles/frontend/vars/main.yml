@@ -1,0 +1,8 @@
+---
+
+github_private_key: "{{ vault_github_private_key }}"
+
+dockerhub_login: "{{ vault_dockerhub_login }}"
+
+dockerhub_password: "{{ vault_dockerhub_password }}"
+

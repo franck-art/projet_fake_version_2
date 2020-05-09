@@ -1,0 +1,6 @@
+---
+# dependance du role frondend au role bacend (Base de données)
+
+dependencies: 
+  - role: backend
+  

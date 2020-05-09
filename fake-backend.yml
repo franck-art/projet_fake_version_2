@@ -1,0 +1,31 @@
+---
+- name: Deploiement de l'appli fake-backend comme  frontend battleboat
+  hosts: web 
+#  gather_facts: false
+  become: yes 
+  vars_files:
+    - "roles/frontend/vars/main.yml"
+    - "roles/frontend/vars/secret.yml"
+    - "roles/frontend/default/main.yml"
+
+  vars:
+    pip_install_packages:
+      - name: docker    
+  
+  pre_tasks:
+  - name: upgrade all packages 
+    yum:
+      name: '*'
+      state: latest 
+
+  - name: Install epel release
+    yum: 
+      name: epel-release
+      state: installed
+
+  roles:
+    - role: 'geerlingguy.pip'
+    - role: 'geerlingguy.docker'
+    - role: 'geerlingguy.git'
+    - role: 'roles/backend'
+    - role: 'roles/frontend' 

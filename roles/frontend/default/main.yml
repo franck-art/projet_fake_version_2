@@ -1,0 +1,10 @@
+---
+
+repo_fake_backend: "git@github.com:franck-art/projet-fake.git"
+
+home: "/home/centos"
+
+fake_backend_source_branch: "master"
+
+
+tag_fake_backend: "v3"

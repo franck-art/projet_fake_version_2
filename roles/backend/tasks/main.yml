@@ -1,0 +1,27 @@
+---
+#  Lancer container base de données
+- name: Create a global network of our two containers
+  docker_network:
+    name: network_game
+
+- name: container battlegame
+  docker_container:
+    name: dbgame
+    image: mysql:5.7
+    state: started
+    env:
+      MYSQL_ROOT_PASSWORD: rootpwdgame
+      MYSQL_DATABASE: battleboat
+      MYSQL_USER: battleuser
+      MYSQL_PASSWORD: battlepass
+
+    volumes:
+      - mysql_config:/var/lib/mysql
+    networks:
+      - name: network_game 
+
+- name: Create a volume
+  docker_volume:
+    name: mysql_config
+
+

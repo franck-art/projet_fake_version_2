@@ -15,7 +15,9 @@ NB:
 ----> Configurer le fichier 'hosts' du Repo
 
 Lancer le playbook comme suit:
+
 sudo ansible-playbook fake-backend.yml -i hosts --ask-vault-pass
+
 Le mot de passe est:....
 Vous devez indiquer votre fichier secret.yml dans roles/frondend/vars/ tel que indiqué dans le main.yml avec l'appel des variables(docker
 hub,dockerlogin...)

@@ -21,3 +21,12 @@ sudo ansible-playbook fake-backend.yml -i hosts --ask-vault-pass
 Le mot de passe est:....
 Vous devez indiquer votre fichier secret.yml dans roles/frondend/vars/ tel que indiqué dans le main.yml avec l'appel des variables(docker
 hub,dockerlogin...)
+
+
+Utilisation:
+
+* Installer Ansible
+
+* Configurer le fichier hosts en indiquant les adresses IP de vos serveurs
+
+* sudo ansible-playbook fake-backend.yml -i hosts --ask-vault-pass

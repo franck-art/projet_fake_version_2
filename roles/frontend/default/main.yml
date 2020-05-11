@@ -1,6 +1,6 @@
 ---
 
-repo_fake_backend: "git@github.com:franck-art/projet-fake.git"
+repo_fake_backend: "git@github.com:franck-art/projet_jenkins_fake-backend.git"
 
 home: "/home/centos"
 
